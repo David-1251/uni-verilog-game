@@ -28,10 +28,10 @@ vga_out m1(.clk(vga_clk), .rin(rin), .gin(gin), .bin(bin),
 			.curr_x(curr_x), .curr_y(curr_y));
 
 			
-drawcon alex(.sw(sw),.blkpos_x(blkpos_x), .blkpos_y(blkpos_y), .wall_x(wall_x), .gap_y(gap_y), .gap_size(gap_size), .draw_x(curr_x), .draw_y(curr_y),
+drawcon draw(.sw(sw),.blkpos_x(blkpos_x), .blkpos_y(blkpos_y), .wall_x(wall_x), .gap_y(gap_y), .gap_size(gap_size), .draw_x(curr_x), .draw_y(curr_y),
              .r(rin),.g(gin),.b(bin), .lose(lose));
             
-points ptolemy(.clk(clk), .reset(reset), .stop(stop), .points_clk(points_clk), .a(a), .b(b), .c(c), .d(d), .e(e), .f(f), .g(g), .an(an));
+points score(.clk(clk), .reset(reset), .stop(stop), .points_clk(points_clk), .a(a), .b(b), .c(c), .d(d), .e(e), .f(f), .g(g), .an(an));
                          
           
 always@(posedge clk_4687khz) begin
